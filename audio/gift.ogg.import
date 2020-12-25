@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gift.ogg-8728b0db334544456450c258b189f026.oggstr"
+
+[deps]
+
+source_file="res://audio/gift.ogg"
+dest_files=[ "res://.import/gift.ogg-8728b0db334544456450c258b189f026.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

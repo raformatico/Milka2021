@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fondo/floor.png" type="Texture" id=1]
+[ext_resource path="res://Fondo/cloud1.png" type="Texture" id=2]
+[ext_resource path="res://Fondo/cloud2.png" type="Texture" id=3]
+
+[node name="BackgroundParallax" type="ParallaxBackground"]
+
+[node name="front" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="front"]
+position = Vector2( 0, -32 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="back" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="cloud" type="Sprite" parent="back"]
+position = Vector2( 179, 193 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+
+[node name="cloud2" type="Sprite" parent="back"]
+position = Vector2( 1061, 391 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+
+[node name="cloud3" type="Sprite" parent="back"]
+position = Vector2( 1171, 415 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 2 )
+
+[node name="cloud4" type="Sprite" parent="back"]
+position = Vector2( 715, 96 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 3 )
+
+[node name="cloud5" type="Sprite" parent="back"]
+position = Vector2( 1846, 7 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 3 )
+
+[node name="cloud6" type="Sprite" parent="back"]
+position = Vector2( 1472, 256 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 3 )

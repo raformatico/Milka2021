@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/retry.gd" type="Script" id=2]
+[ext_resource path="res://fonts/text.tres" type="Theme" id=3]
+
+[node name="retry" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.203922 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 197.0
+margin_top = 140.0
+margin_right = 827.0
+margin_bottom = 459.0
+custom_constants/separation = 20
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 630.0
+margin_bottom = 169.0
+rect_min_size = Vector2( 630, 0 )
+theme = ExtResource( 3 )
+text = "Milka! 
+Sólo has conseguido 5 regalos.
+Intenta conseguir al menos 10 para que te demos tu premio"
+align = 1
+autowrap = true
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 189.0
+margin_right = 630.0
+margin_bottom = 319.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 190.0
+margin_right = 440.0
+margin_bottom = 130.0
+custom_constants/separation = 30
+
+[node name="Button" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 250.0
+margin_bottom = 50.0
+text = "Otra vez"
+
+[node name="Button2" parent="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_left = 0.0
+margin_top = 80.0
+margin_right = 250.0
+margin_bottom = 130.0
+text = "Salir"
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Button/TextureButton" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Button2/TextureButton" to="." method="_on_exit_pressed"]
+
+[editable path="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Button"]
+
+[editable path="CenterContainer/VBoxContainer/CenterContainer/VBoxContainer/Button2"]
